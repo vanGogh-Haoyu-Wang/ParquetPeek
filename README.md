@@ -14,20 +14,10 @@ without loading the whole file into Swift memory.
 brew install apache-arrow
 ```
 
-## Run
+## Installation
 
-```bash
-./script/build_and_run.sh
-```
+Download the latest `.dmg` from Releases.
 
-The app Run action is wired to the same script.
-
-## Package
-
-```bash
-./script/package_app.sh
-```
-
-The packaging script builds a release `.app`, embeds the app icon and Homebrew
-Arrow runtime libraries, applies an ad-hoc local signature, and writes
-`release/ParquetPeek.dmg`.
+1. Download `ParquetPeek.dmg`
+2. Drag ParquetPeek into Applications
+3. Launch the app
