@@ -1,0 +1,19 @@
+{
+  "": {
+    "swift-dependencies": "/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeekCore.build/primary.swiftdeps"
+  },
+  "/Users/vangogh/Documents/ParquetPeek/Sources/ParquetPeekCore/Formatters.swift": {
+    "dependencies": "/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeekCore.build/Formatters.d",
+    "object": "/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeekCore.build/Formatters.swift.o",
+    "swiftmodule": "/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeekCore.build/Formatters~partial.swiftmodule",
+    "swift-dependencies": "/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeekCore.build/Formatters.swiftdeps",
+    "diagnostics": "/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeekCore.build/Formatters.dia"
+  },
+  "/Users/vangogh/Documents/ParquetPeek/Sources/ParquetPeekCore/ParquetModels.swift": {
+    "dependencies": "/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeekCore.build/ParquetModels.d",
+    "object": "/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeekCore.build/ParquetModels.swift.o",
+    "swiftmodule": "/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeekCore.build/ParquetModels~partial.swiftmodule",
+    "swift-dependencies": "/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeekCore.build/ParquetModels.swiftdeps",
+    "diagnostics": "/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeekCore.build/ParquetModels.dia"
+  }
+}

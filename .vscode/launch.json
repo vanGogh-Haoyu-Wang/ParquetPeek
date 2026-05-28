@@ -1,0 +1,44 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:ParquetPeek}",
+            "name": "Debug ParquetPeek",
+            "target": "ParquetPeek",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug ParquetPeek"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:ParquetPeek}",
+            "name": "Release ParquetPeek",
+            "target": "ParquetPeek",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release ParquetPeek"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:ParquetPeek}",
+            "name": "Debug ParquetPeekSelfTests",
+            "target": "ParquetPeekSelfTests",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug ParquetPeekSelfTests"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:ParquetPeek}",
+            "name": "Release ParquetPeekSelfTests",
+            "target": "ParquetPeekSelfTests",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release ParquetPeekSelfTests"
+        }
+    ]
+}

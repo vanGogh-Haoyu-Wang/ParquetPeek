@@ -1,0 +1,4 @@
+module CParquetBridge {
+    umbrella header "/Users/vangogh/Documents/ParquetPeek/Sources/CParquetBridge/include/CParquetBridge.h"
+    export *
+}

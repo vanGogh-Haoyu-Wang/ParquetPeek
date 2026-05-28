@@ -1,0 +1,95 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "CParquetBridge-arm64-apple-macosx-debug.module": ["<CParquetBridge-arm64-apple-macosx-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "ParquetPeek-arm64-apple-macosx-debug.module": ["<ParquetPeek-arm64-apple-macosx-debug.module>"]
+  "ParquetPeekCore-arm64-apple-macosx-debug.module": ["<ParquetPeekCore-arm64-apple-macosx-debug.module>"]
+  "ParquetPeekSelfTests-arm64-apple-macosx-debug.module": ["<ParquetPeekSelfTests-arm64-apple-macosx-debug.module>"]
+  "main": ["<ParquetPeek-arm64-apple-macosx-debug.module>","<ParquetPeekCore-arm64-apple-macosx-debug.module>","<ParquetPeekSelfTests-arm64-apple-macosx-debug.module>"]
+  "test": ["<ParquetPeek-arm64-apple-macosx-debug.module>","<ParquetPeekCore-arm64-apple-macosx-debug.module>","<ParquetPeekSelfTests-arm64-apple-macosx-debug.module>"]
+default: "main"
+nodes:
+  "/Users/vangogh/Documents/ParquetPeek/Sources/CParquetBridge/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/vangogh/Documents/ParquetPeek/Sources/ParquetPeek/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/vangogh/Documents/ParquetPeek/Sources/ParquetPeekCore/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/vangogh/Documents/ParquetPeek/Sources/ParquetPeekSelfTests/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeek.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/vangogh/Documents/ParquetPeek/Sources/ParquetPeek/App/ParquetPeekApp.swift","/Users/vangogh/Documents/ParquetPeek/Sources/ParquetPeek/Services/ArrowParquetService.swift","/Users/vangogh/Documents/ParquetPeek/Sources/ParquetPeek/Services/ParquetService.swift","/Users/vangogh/Documents/ParquetPeek/Sources/ParquetPeek/Stores/ParquetBrowserStore.swift","/Users/vangogh/Documents/ParquetPeek/Sources/ParquetPeek/Views/ContentView.swift","/Users/vangogh/Documents/ParquetPeek/Sources/ParquetPeek/Views/DetailView.swift","/Users/vangogh/Documents/ParquetPeek/Sources/ParquetPeek/Views/SidebarView.swift"]
+    outputs: ["/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeek.build/sources"]
+    description: "Write auxiliary file /Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeek.build/sources"
+
+  "/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeekCore.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/vangogh/Documents/ParquetPeek/Sources/ParquetPeekCore/Formatters.swift","/Users/vangogh/Documents/ParquetPeek/Sources/ParquetPeekCore/ParquetModels.swift"]
+    outputs: ["/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeekCore.build/sources"]
+    description: "Write auxiliary file /Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeekCore.build/sources"
+
+  "/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeekSelfTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/vangogh/Documents/ParquetPeek/Sources/ParquetPeekSelfTests/main.swift"]
+    outputs: ["/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeekSelfTests.build/sources"]
+    description: "Write auxiliary file /Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeekSelfTests.build/sources"
+
+  "/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Library/Developer/CommandLineTools/usr/bin/swiftc"]
+    outputs: ["/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+
+  "<ParquetPeek-arm64-apple-macosx-debug.module>":
+    tool: phony
+    inputs: ["/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/Modules/ParquetPeek.swiftmodule"]
+    outputs: ["<ParquetPeek-arm64-apple-macosx-debug.module>"]
+
+  "<ParquetPeekCore-arm64-apple-macosx-debug.module>":
+    tool: phony
+    inputs: ["/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/Modules/ParquetPeekCore.swiftmodule"]
+    outputs: ["<ParquetPeekCore-arm64-apple-macosx-debug.module>"]
+
+  "<ParquetPeekSelfTests-arm64-apple-macosx-debug.module>":
+    tool: phony
+    inputs: ["/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/Modules/ParquetPeekSelfTests.swiftmodule"]
+    outputs: ["<ParquetPeekSelfTests-arm64-apple-macosx-debug.module>"]
+
+  "C.ParquetPeek-arm64-apple-macosx-debug.module":
+    tool: shell
+    inputs: ["/Users/vangogh/Documents/ParquetPeek/Sources/ParquetPeek/App/ParquetPeekApp.swift","/Users/vangogh/Documents/ParquetPeek/Sources/ParquetPeek/Services/ArrowParquetService.swift","/Users/vangogh/Documents/ParquetPeek/Sources/ParquetPeek/Services/ParquetService.swift","/Users/vangogh/Documents/ParquetPeek/Sources/ParquetPeek/Stores/ParquetBrowserStore.swift","/Users/vangogh/Documents/ParquetPeek/Sources/ParquetPeek/Views/ContentView.swift","/Users/vangogh/Documents/ParquetPeek/Sources/ParquetPeek/Views/DetailView.swift","/Users/vangogh/Documents/ParquetPeek/Sources/ParquetPeek/Views/SidebarView.swift","/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/Modules/ParquetPeekCore.swiftmodule","/Users/vangogh/Documents/ParquetPeek/Sources/CParquetBridge/include/CParquetBridge.h","/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeek.build/sources"]
+    outputs: ["/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/Modules/ParquetPeek.swiftmodule"]
+    description: "Compiling Swift Module 'ParquetPeek' (7 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","ParquetPeek","-emit-dependencies","-emit-module","-emit-module-path","/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/Modules/ParquetPeek.swiftmodule","-output-file-map","/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeek.build/output-file-map.json","-incremental","@/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeek.build/sources","-I","/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx14.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-Onone","-enable-testing","-j8","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-Xcc","-fmodule-map-file=/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/CParquetBridge.build/module.modulemap","-Xcc","-I","-Xcc","/Users/vangogh/Documents/ParquetPeek/Sources/CParquetBridge/include","-module-cache-path","/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","ParquetPeek_main","-swift-version","6","-Xfrontend","-experimental-lazy-typecheck","-Xfrontend","-experimental-skip-all-function-bodies","-Xfrontend","-experimental-allow-module-with-compiler-errors","-Xfrontend","-empty-abi-descriptor","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","parquetpeek"]
+
+  "C.ParquetPeekCore-arm64-apple-macosx-debug.module":
+    tool: shell
+    inputs: ["/Users/vangogh/Documents/ParquetPeek/Sources/ParquetPeekCore/Formatters.swift","/Users/vangogh/Documents/ParquetPeek/Sources/ParquetPeekCore/ParquetModels.swift","/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeekCore.build/sources"]
+    outputs: ["/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/Modules/ParquetPeekCore.swiftmodule"]
+    description: "Compiling Swift Module 'ParquetPeekCore' (2 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","ParquetPeekCore","-emit-dependencies","-emit-module","-emit-module-path","/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/Modules/ParquetPeekCore.swiftmodule","-output-file-map","/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeekCore.build/output-file-map.json","-parse-as-library","-incremental","@/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeekCore.build/sources","-I","/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx14.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-Onone","-enable-testing","-j8","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeekCore.build/include/ParquetPeekCore-Swift.h","-swift-version","6","-Xfrontend","-experimental-lazy-typecheck","-Xfrontend","-experimental-skip-all-function-bodies","-Xfrontend","-experimental-allow-module-with-compiler-errors","-Xfrontend","-empty-abi-descriptor","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","parquetpeek"]
+
+  "C.ParquetPeekSelfTests-arm64-apple-macosx-debug.module":
+    tool: shell
+    inputs: ["/Users/vangogh/Documents/ParquetPeek/Sources/ParquetPeekSelfTests/main.swift","/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/Modules/ParquetPeekCore.swiftmodule","/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeekSelfTests.build/sources"]
+    outputs: ["/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/Modules/ParquetPeekSelfTests.swiftmodule"]
+    description: "Compiling Swift Module 'ParquetPeekSelfTests' (1 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","ParquetPeekSelfTests","-emit-dependencies","-emit-module","-emit-module-path","/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/Modules/ParquetPeekSelfTests.swiftmodule","-output-file-map","/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeekSelfTests.build/output-file-map.json","-incremental","@/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeekSelfTests.build/sources","-I","/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx14.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-Onone","-enable-testing","-j8","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","ParquetPeekSelfTests_main","-swift-version","6","-Xfrontend","-experimental-lazy-typecheck","-Xfrontend","-experimental-skip-all-function-bodies","-Xfrontend","-experimental-allow-module-with-compiler-errors","-Xfrontend","-empty-abi-descriptor","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","parquetpeek"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/vangogh/Documents/ParquetPeek/Sources/CParquetBridge/","/Users/vangogh/Documents/ParquetPeek/Sources/ParquetPeek/","/Users/vangogh/Documents/ParquetPeek/Sources/ParquetPeekCore/","/Users/vangogh/Documents/ParquetPeek/Sources/ParquetPeekSelfTests/","/Users/vangogh/Documents/ParquetPeek/Package.swift","/Users/vangogh/Documents/ParquetPeek/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

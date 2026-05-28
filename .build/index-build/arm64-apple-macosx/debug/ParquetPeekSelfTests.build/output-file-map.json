@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeekSelfTests.build/primary.swiftdeps"
+  },
+  "/Users/vangogh/Documents/ParquetPeek/Sources/ParquetPeekSelfTests/main.swift": {
+    "dependencies": "/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeekSelfTests.build/main.d",
+    "object": "/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeekSelfTests.build/main.swift.o",
+    "swiftmodule": "/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeekSelfTests.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeekSelfTests.build/main.swiftdeps",
+    "diagnostics": "/Users/vangogh/Documents/ParquetPeek/.build/index-build/arm64-apple-macosx/debug/ParquetPeekSelfTests.build/main.dia"
+  }
+}
